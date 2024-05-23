@@ -2,9 +2,13 @@ import time
 import os
 import joblib
 import streamlit as st
-import google.generativeai as genai
-from dotenv import load_dotenv
-load_dotenv()
+import base64
+import vertexai
+from vertexai.generative_models import GenerativeModel, Part, Tool
+import vertexai.preview.generative_models as generative_models
+
+
+
 GOOGLE_API_KEY=os.environ.get('GOOGLE_API_KEY')
 genai.configure(api_key=GOOGLE_API_KEY)
 
